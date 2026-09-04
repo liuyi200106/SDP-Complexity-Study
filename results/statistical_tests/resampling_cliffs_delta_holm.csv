@@ -1,0 +1,21 @@
+﻿metric,comparison,mean_diff,cliffs_delta,p_raw,p_holm,significant_after_holm
+F1,FIB_Borderline vs FIB_ShapOnly,0.0039,0.0612,0.9515,1.0,False
+F1,FIB_Adaptive vs FIB_Borderline,-0.0034,-0.0918,0.4263,1.0,False
+F1,FIB_Full vs FIB_Adaptive,0.007,0.1122,0.3575,1.0,False
+F1,FIB_Full vs FIB_ShapOnly,0.0075,0.0816,0.8077,1.0,False
+F1,FIB_ShapOnly vs NoResample,0.0982,0.3571,0.0004,0.0037,True
+F1,FIB_Full vs SMOTE,0.0052,0.0612,0.9515,1.0,False
+F1,FIB_Full vs BorderlineSMOTE,0.0058,0.0408,0.2412,1.0,False
+F1,FIB_Full vs ADASYN,0.008,0.0918,0.2958,1.0,False
+F1,FIB_Full vs SMOTETomek,0.0056,0.0918,0.4631,1.0,False
+F1,FIB_Full vs CostSensitive,0.0127,0.0612,0.104,0.936,False
+Gmean,FIB_Borderline vs FIB_ShapOnly,-0.0118,-0.102,0.1531,1.0,False
+Gmean,FIB_Adaptive vs FIB_Borderline,-0.0008,0.0102,0.583,1.0,False
+Gmean,FIB_Full vs FIB_Adaptive,0.0081,0.051,0.1937,1.0,False
+Gmean,FIB_Full vs FIB_ShapOnly,-0.0045,-0.0612,0.2676,1.0,False
+Gmean,FIB_ShapOnly vs NoResample,0.1747,0.602,0.0001,0.0012,True
+Gmean,FIB_Full vs SMOTE,-0.0022,-0.0612,0.7609,1.0,False
+Gmean,FIB_Full vs BorderlineSMOTE,-0.0,-0.0408,1.0,1.0,False
+Gmean,FIB_Full vs ADASYN,-0.0066,-0.1327,0.3575,1.0,False
+Gmean,FIB_Full vs SMOTETomek,-0.0081,-0.051,0.7609,1.0,False
+Gmean,FIB_Full vs CostSensitive,0.0114,0.0816,0.391,1.0,False

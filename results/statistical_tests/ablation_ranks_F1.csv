@@ -1,0 +1,6 @@
+﻿config,avg_rank
+A_Baseline,4.0
+B_FS,4.5
+C_FS_Sampling,1.7142857142857142
+D_Full_Untuned,2.5
+E_Full_Tuned,2.2857142857142856

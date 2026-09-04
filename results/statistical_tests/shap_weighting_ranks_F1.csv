@@ -1,0 +1,5 @@
+weight_mode,avg_rank
+true_shap,2.3076923076923075
+uniform,2.0
+random,2.769230769230769
+shuffled,2.923076923076923

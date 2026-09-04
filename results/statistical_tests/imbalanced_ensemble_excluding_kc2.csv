@@ -1,0 +1,9 @@
+﻿metric,comparison,mean_diff,cliffs_delta,p_raw,p_holm,sig_holm
+F1,ABF_Hybrid vs C_Reference,0.0103,0.0533,0.4973,0.4973,False
+F1,ABF_Hybrid vs BalancedRF,-0.0132,-0.1124,0.0327,0.1309,False
+F1,ABF_Hybrid vs EasyEnsemble,0.0148,0.1124,0.0398,0.1309,False
+F1,ABF vs BalancedRF,-0.0123,-0.1006,0.2439,0.4878,False
+Gmean,ABF_Hybrid vs C_Reference,0.0848,0.6923,0.0002,0.001,True
+Gmean,ABF_Hybrid vs BalancedRF,-0.0007,-0.0414,1.0,1.0,False
+Gmean,ABF_Hybrid vs EasyEnsemble,-0.0014,-0.0414,0.8926,1.0,False
+Gmean,ABF vs BalancedRF,-0.054,-0.4438,0.0024,0.0073,True

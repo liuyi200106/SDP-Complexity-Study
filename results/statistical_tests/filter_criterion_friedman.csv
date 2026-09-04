@@ -1,0 +1,6 @@
+﻿metric,friedman_stat,friedman_p
+F1,3.8947,0.2731
+AUC,1.1667,0.761
+PRAUC,1.1579,0.7631
+MCC,3.6842,0.2976
+Gmean,3.2632,0.3528

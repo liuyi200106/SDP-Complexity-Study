@@ -1,0 +1,21 @@
+﻿metric,comparison,mean_diff,wilcoxon_stat,p_value,n_datasets
+F1,C_FS_Sampling vs A_Baseline (FS+sampling contribution),0.101,0.0,0.0001220703125,14
+F1,D_Full_Untuned vs C_FS_Sampling (untuned ensemble contribution),-0.0133,28.0,0.13525390625,14
+F1,E_Full_Tuned vs C_FS_Sampling (tuned ensemble contribution),-0.0105,31.0,0.1937255859375,14
+F1,E_Full_Tuned vs D_Full_Untuned (Bayesian-opt contribution),0.0028,44.0,0.625732421875,14
+F1,E_Full_Tuned vs A_Baseline (overall pipeline),0.0905,6.0,0.001708984375,14
+AUC,C_FS_Sampling vs A_Baseline (FS+sampling contribution),-0.0107,20.0,0.0418701171875,14
+AUC,D_Full_Untuned vs C_FS_Sampling (untuned ensemble contribution),-0.0032,39.0,0.42626953125,14
+AUC,E_Full_Tuned vs C_FS_Sampling (tuned ensemble contribution),-0.0072,30.0,0.172607421875,14
+AUC,E_Full_Tuned vs D_Full_Untuned (Bayesian-opt contribution),-0.004,32.0,0.216552734375,14
+AUC,E_Full_Tuned vs A_Baseline (overall pipeline),-0.0178,19.0,0.0352783203125,14
+MCC,C_FS_Sampling vs A_Baseline (FS+sampling contribution),0.0444,18.0,0.029541015625,14
+MCC,D_Full_Untuned vs C_FS_Sampling (untuned ensemble contribution),-0.0098,39.0,0.42626953125,14
+MCC,E_Full_Tuned vs C_FS_Sampling (tuned ensemble contribution),-0.0058,40.0,0.463134765625,14
+MCC,E_Full_Tuned vs D_Full_Untuned (Bayesian-opt contribution),0.004,43.0,0.5830078125,14
+MCC,E_Full_Tuned vs A_Baseline (overall pipeline),0.0386,24.0,0.0784912109375,14
+Gmean,C_FS_Sampling vs A_Baseline (FS+sampling contribution),0.1665,0.0,0.0001220703125,14
+Gmean,D_Full_Untuned vs C_FS_Sampling (untuned ensemble contribution),-0.0192,24.0,0.0784912109375,14
+Gmean,E_Full_Tuned vs C_FS_Sampling (tuned ensemble contribution),-0.0202,24.0,0.0784912109375,14
+Gmean,E_Full_Tuned vs D_Full_Untuned (Bayesian-opt contribution),-0.001,51.0,0.9515380859375,14
+Gmean,E_Full_Tuned vs A_Baseline (overall pipeline),0.1463,1.0,0.000244140625,14

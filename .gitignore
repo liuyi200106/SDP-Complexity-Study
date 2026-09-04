@@ -1,0 +1,18 @@
+# Raw datasets are downloaded, not committed (see data/README.md)
+data/raw/
+
+# Byproducts of scripts/statistical_analysis.py verification runs; the
+# authoritative test files are committed without this suffix.
+results/statistical_tests/*_recomputed.csv
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

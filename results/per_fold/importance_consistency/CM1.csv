@@ -1,0 +1,6 @@
+﻿dataset,fold,n_features,spearman_rho,top_half_overlap
+CM1,0,3,1.0,1.0
+CM1,1,7,0.6785714285714287,0.75
+CM1,2,3,1.0,1.0
+CM1,3,5,0.9999999999999999,1.0
+CM1,4,3,1.0,1.0

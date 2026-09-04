@@ -1,0 +1,16 @@
+﻿metric,comparison,mean_diff,cliffs_delta,effect,p_raw,p_holm,significant_after_holm
+F1,true_shap vs uniform,-0.0006,-0.0296,negligible,0.946,0.946,False
+F1,true_shap vs random,0.006,0.0059,negligible,0.2439,0.4878,False
+F1,true_shap vs shuffled,0.0094,0.0651,negligible,0.1465,0.4395,False
+AUC,true_shap vs uniform,-0.003,-0.0414,negligible,0.1465,0.4395,False
+AUC,true_shap vs random,-0.0013,-0.0296,negligible,0.4973,0.9946,False
+AUC,true_shap vs shuffled,-0.0014,-0.0059,negligible,0.8394,0.9946,False
+PRAUC,true_shap vs uniform,-0.0086,-0.0414,negligible,0.1677,0.5032,False
+PRAUC,true_shap vs random,-0.0023,0.0059,negligible,0.4973,0.5032,False
+PRAUC,true_shap vs shuffled,-0.0041,-0.0059,negligible,0.2163,0.5032,False
+MCC,true_shap vs uniform,-0.0011,-0.0414,negligible,0.8926,0.8926,False
+MCC,true_shap vs random,0.0064,-0.0178,negligible,0.3054,0.6108,False
+MCC,true_shap vs shuffled,0.0107,-0.0059,negligible,0.1677,0.5032,False
+Gmean,true_shap vs uniform,-0.0059,-0.0651,negligible,0.6355,1.0,False
+Gmean,true_shap vs random,0.0021,-0.0178,negligible,0.7354,1.0,False
+Gmean,true_shap vs shuffled,0.0066,-0.0059,negligible,0.2734,0.8203,False

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: >-
+  SDP-Complexity-Study: code and results for "Does Added Complexity Pay Off?"
+message: >-
+  If you use this software or its results, please cite both the software and
+  the paper it accompanies.
+type: software
+authors:
+  - given-names: Yi
+    family-names: Liu
+    affiliation: University of Glasgow
+license: MIT
+abstract: >-
+  Component-wise empirical study of feature selection, resampling and ensembling
+  for imbalanced software defect prediction. Measures the marginal contribution
+  of each pipeline component across 14 datasets under stratified 5-fold
+  cross-validation, with per-fold results and all significance tests published
+  alongside the code.
+keywords:
+  - software defect prediction
+  - class imbalance
+  - component-wise ablation
+  - controlled experiments
+  - SHAP
+  - feature selection
+  - ensemble learning
+  - reproducibility
+
+preferred-citation:
+  type: article
+  title: >-
+    Does Added Complexity Pay Off? A Component-Wise Empirical Study of Feature
+    Selection, Resampling and Ensembling for Imbalanced Software Defect
+    Prediction
+  authors:
+    - given-names: Yi
+      family-names: Liu
+      affiliation: University of Glasgow
+  year: 2026
