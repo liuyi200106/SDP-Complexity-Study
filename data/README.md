@@ -1,16 +1,19 @@
 # Data
 
-The raw defect datasets are **not redistributed here**. All three collections are
-publicly available from their original maintainers, and mirroring them would
-only risk this copy drifting from the canonical one. Download them into the
-layout below and every script in the repository will find them; the paths are
-declared in [`src/utils.py`](../src/utils.py) (`DATASETS`).
+The raw defect datasets are **not redistributed here**. All of them are publicly
+available from their original maintainers, and mirroring them would only risk
+this copy drifting from the canonical one. Download them into the layout below
+and every script in the repository will find them; the paths are declared in
+[`src/utils.py`](../src/utils.py) (`DATASETS`).
+
+The provenance recorded here matches the Data Availability Statement of the
+accompanying paper.
 
 ## Expected layout
 
 ```
 data/raw/
-├── promise/                                   # PROMISE repository, ARFF
+├── promise/                                   # PROMISE, ARFF
 │   ├── cm1.arff  jm1.arff  kc1.arff  kc2.arff  pc1.arff
 ├── nasa_mdp/
 │   └── CleanedData/MDP/D''/                   # Shepperd et al. cleaned, D'' variant
@@ -22,25 +25,42 @@ data/raw/
 
 ## Sources
 
-| Group | Origin |
+**The nine procedural-metric datasets** — PROMISE (CM1, JM1, KC1, KC2, PC1) and
+the cleaned NASA MDP D'' variants (MW1, PC3, PC4, MC2) — were retrieved from two
+maintained GitHub mirrors:
+
+| Group | Mirror |
 |---|---|
-| PROMISE | NASA datasets as distributed by the PROMISE Software Engineering Repository, `http://promise.site.uottawa.ca/SERepository/datasets-page.html` |
-| NASA MDP | Cleaned NASA MDP data of Shepperd et al. (2014), **D''** variant (mirror maintained by C. Tantithamthavorn) |
-| Java CK | `DefectData` R package, `github.com/klainfo/DefectData`; TeraPROMISE CK metrics collected by Jureczko & Madeyski |
+| PROMISE | `https://github.com/ApoorvaKrisna/NASA-promise-dataset-repository` |
+| NASA MDP (D'') | `https://github.com/klainfo/NASADefectDataset` (maintained by Chakkrit Tantithamthavorn) |
+
+The mirrors are used because the original PROMISE and NASA MDP hosting URLs are
+subject to link rot. Both preserve the original file contents. Provenance for the
+underlying data is documented in Sayyad Shirabad & Menzies (2005) and Shepperd et
+al. (2013).
+
+**The five Java datasets** (ant-1.7, camel-1.6, tomcat, xalan-2.4, synapse-1.2)
+come from the Jureczko/Madeyski CK-metric collection as packaged in the
+`DefectData` R package (`https://github.com/klainfo/DefectData`, MIT licence,
+maintained by Chakkrit Tantithamthavorn; commit `e65993d`, 2018-01-01),
+specifically the files `inst/extdata/terapromise/ck/<project>.csv`. These provide
+20 CK object-oriented metrics per class plus a `bug` column holding the
+post-release defect **count**. The count is binarised in the standard way for
+this benchmark (`bug > 0` maps to the positive class). The files are used as
+distributed, without additional cleaning.
 
 Two NASA projects appear in both the PROMISE and the NASA MDP collections, and
-the two differ: Shepperd et al.'s cleaning removes inconsistent and duplicated
-modules, so their module counts are lower than the PROMISE originals. The table
-below records which source each dataset was actually loaded from, so the counts
-are unambiguous. PC1 comes from PROMISE; MW1, PC3, PC4 and MC2 come from the
-cleaned D'' data.
+the two differ: the cleaning of Shepperd et al. removes inconsistent and
+duplicated modules, so their module counts are lower than the PROMISE originals.
+The table below records which source each dataset was actually loaded from, so
+the counts are unambiguous. PC1 comes from PROMISE; MW1, PC3, PC4 and MC2 come
+from the cleaned D'' data.
 
 ## Dataset characteristics
 
 Counts below were produced by loading each file through `src/utils.py`
 (`load_defect_dataset`), i.e. after metadata columns are dropped and the target
-is binarised, i.e. the same state the experiments see. `bug > 0` is treated as
-defective for the CK datasets.
+is binarised, which is the same state the experiments see.
 
 | Group | Dataset | Instances | Features | Defective | Defect rate |
 |---|---|---:|---:|---:|---:|
@@ -62,10 +82,11 @@ defective for the CK datasets.
 ## Notes on dataset selection
 
 **One version per project.** The CK collection contains several releases of each
-Java project (ant-1.3 … ant-1.7 and so on). Only one release per project is used.
-Successive releases of the same codebase share most of their modules, so counting
-them as separate datasets would inflate *n* while breaking the independence
-assumption the paired tests in `scripts/statistical_analysis.py` rely on.
+Java project (ant-1.3 ... ant-1.7 and so on). Only one release per project is
+used. Successive releases of the same codebase share most of their modules, so
+counting them as separate datasets would inflate *n* while breaking the
+independence assumption the paired tests in `scripts/statistical_analysis.py`
+rely on. This is stated in Section 3.2 of the paper.
 
 **JM1 is excluded from the SHAP diagnostics.** RQ3, RQ4 and RQ5 run on 13 of the
 14 datasets. JM1 has 10,885 modules and the exact TreeExplainer pass inside the
@@ -78,3 +99,17 @@ procedural metrics and the CK object-oriented metrics share no feature names.
 Cross-project transfer (`rq7_robustness.py --part cross-project`) is therefore
 run within a group, never across groups, and the cross-dataset feature-importance
 analysis is restricted to the nine procedural-metric datasets.
+
+## References
+
+Sayyad Shirabad, J., & Menzies, T. (2005). *The PROMISE Repository of Software
+Engineering Databases.* School of Information Technology and Engineering,
+University of Ottawa, Canada.
+
+Shepperd, M., Song, Q., Sun, Z., & Mair, C. (2013). Data quality: Some comments
+on the NASA software defect datasets. *IEEE Transactions on Software
+Engineering*, 39(9), 1208-1215.
+
+Jureczko, M., & Madeyski, L. (2010). Towards identifying software project
+clusters with regard to defect prediction. In *Proceedings of the 6th
+International Conference on Predictive Models in Software Engineering (PROMISE)*.
