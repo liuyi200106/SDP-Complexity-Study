@@ -9,7 +9,9 @@ authors:
   - given-names: Yi
     family-names: Liu
     affiliation: University of Glasgow
+    orcid: 'https://orcid.org/0009-0005-3847-3705'
 license: MIT
+repository-code: 'https://github.com/liuyi200106/SDP-Complexity-Study'
 abstract: >-
   Component-wise empirical study of feature selection, resampling and ensembling
   for imbalanced software defect prediction. Measures the marginal contribution
@@ -36,4 +38,5 @@ preferred-citation:
     - given-names: Yi
       family-names: Liu
       affiliation: University of Glasgow
+      orcid: 'https://orcid.org/0009-0005-3847-3705'
   year: 2026
